@@ -1,0 +1,3 @@
+white  : #ffff
+silver : #d9d9d9d
+blue   : #40679c
