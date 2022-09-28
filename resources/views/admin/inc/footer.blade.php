@@ -2,7 +2,7 @@
         <div class="container">
             <div class="row align-items-center flex-row-reverse">
                 <div class="col-lg-12 col-sm-12 mt-3 mt-lg-0 text-center" style="font-family:ar;">
-                    Copyright © 2020 <a href="https://kafa2aat.cmark.sa">Cmark</a> All rights reserved.
+                    <h4 class="text-center mt-3">Developed By <a href="https://teraninja.com" target="_blank">TeraNinja</a></h4>
                 </div>
             </div>
         </div>

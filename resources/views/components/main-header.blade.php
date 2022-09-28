@@ -213,36 +213,36 @@
 
                 </nav>
             </div>
-            <form id="formInSearchBar" action="{{url('/courses/filter')}}" method="POST">
-                @csrf
-                <img class="imgSearchBar" src="{{asset('assets/images/xRed.png')}}" width="20px" height="20px">
-                <div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto chooseCourseTypeHere">
-                    <div class="search-background bg-transparent" style="box-shadow: 4px 19px 20px 5px rgba(0,0,0,0.2);border-radius: 10px;font-family: 'ar'">
-                        <div class="form row no-gutters " >
-                            <div class="form-group  col-xl-4 col-lg-3 col-md-12 mb-0  ">
-                                <input type="text" name="byName" class="form-control input-lg br-tr-md-0 br-br-md-0" id="text4" placeholder="إبحث عن دوره بالإسم " style="border-radius: 10px;">
-                            </div>
-                            <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 ">
-                                <select type="text" name="byType" class="form-control input-lg br-md-0" id="text5"  >
-                                    <option disabled selected style="color: #AAAAA9"> النوع</option>
-                                    <option value="1">حضورى</option>
-                                    <option value="2"> عن بعد</option>
-                                    <option value="3">مشاهدة</option>
-                                </select>
+        </div>
+        <form id="formInSearchBar" action="{{url('/courses/filter')}}" method="POST">
+            @csrf
+            <img class="imgSearchBar" src="{{asset('assets/images/xRed.png')}}" width="20px" height="20px">
+            <div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto chooseCourseTypeHere">
+                <div class="search-background bg-transparent" style="box-shadow: 4px 19px 20px 5px rgba(0,0,0,0.2);border-radius: 10px;font-family: 'ar'">
+                    <div class="form row no-gutters " >
+                        <div class="form-group  col-xl-4 col-lg-3 col-md-12 mb-0  ">
+                            <input type="text" name="byName" class="form-control input-lg br-tr-md-0 br-br-md-0" id="text4" placeholder="إبحث عن دوره بالإسم " style="border-radius: 10px;">
+                        </div>
+                        <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 ">
+                            <select type="text" name="byType" class="form-control input-lg br-md-0" id="text5"  >
+                                <option disabled selected style="color: #AAAAA9"> النوع</option>
+                                <option value="1">حضورى</option>
+                                <option value="2"> عن بعد</option>
+                                <option value="3">مشاهدة</option>
+                            </select>
 
 
-                            </div>
-                            <div class="form-group col-xl-3 col-lg-3 col-md-12 s  mb-0 ">
-                                <input class="form-control input-lg br-tr-md-0 br-br-md-0" type="date" id="tbDate" name="byDate">
-                            </div>
-                            <div class="col-xl-2 col-lg-3 col-md-12 mb-0">
-                                <button  type="submit" class="btn btn-lg btn-block btn-danger br-tl-md-0 br-bl-md-0" style="box-shadow: 4px 19px 20px 5px rgba(0,0,0,0.2);font-family: ar">ابحث هنا</button>
-                            </div>
+                        </div>
+                        <div class="form-group col-xl-3 col-lg-3 col-md-12 s  mb-0 ">
+                            <input class="form-control input-lg br-tr-md-0 br-br-md-0" type="date" id="tbDate" name="byDate">
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-12 mb-0">
+                            <button  type="submit" class="btn btn-lg btn-block btn-danger br-tl-md-0 br-bl-md-0" style="box-shadow: 4px 19px 20px 5px rgba(0,0,0,0.2);font-family: ar">ابحث هنا</button>
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
     </div>
 <!--/Horizontal-main -->
 <section style="background-color: #ffffff">
@@ -252,7 +252,7 @@
         <div class="header-text mb-0">
             <div class="">
                 <?php
-                $ads = session()->get('ads');
+                    $ads = session()->get('ads');
                 ?>
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
@@ -310,6 +310,12 @@
 <script>
 
    $(window).scroll(function(){
+        // $('#formInSearchBar').hide('slow');
+        if($(window).scrollTop() > 60){
+            $('#formInSearchBar').css('top', '76px');
+        }else{
+            $('#formInSearchBar').css('top', '107px');
+        }
         if($(window).scrollTop() > 55 && $(window).width() >= 1024){
             $('.horizontalMenu-list li a').css('color' , '#ffffff');
             $('.horizontalMenu-list li a.active').css('color' , '#fff');
@@ -353,13 +359,13 @@
     });
     $('.imgSearch').on('click' , function(e){
         // console.log('fahmy');
-        $('.horizontal-mainwrapper').slideToggle('slow');
+        // $('.horizontal-mainwrapper').slideToggle('slow');
         $('#formInSearchBar').slideToggle('slow');
     });
 
     $('.imgSearchBar').on('click' , function(){
     //   console.log('fahmy');
-       $('.horizontal-mainwrapper').slideToggle('slow');
+    //    $('.horizontal-mainwrapper').slideToggle('slow');
        $('#formInSearchBar').slideToggle('slow');
     });
 

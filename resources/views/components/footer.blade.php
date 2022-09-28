@@ -315,7 +315,6 @@
         </div>
         <div class="container">
             <h4 class="text-center mt-4 copyrightTera">Developed By <a href="https://teraninja.com" target="_blank">TeraNinja</a></h4>
-
         </div>
     </footer>
 </section>

@@ -15517,8 +15517,9 @@ svg {
     right:-30px;
 }
 .adsHeader3{
-    position:relative;
-    right:80px;
+    position:absolute;
+    bottom:-5px;
+    right: 90px;
 }
 
 .imgSearch{
@@ -15559,24 +15560,33 @@ svg {
     right:80px;
 }
 #formInSearchBar{
-    position:relative;
+    position: fixed;
+    top: 107px;
+    box-shadow: 4px 19px 20px 5px rgb(0 0 0 / 20%);
+    right: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 999;
+    background: #fff;
+    padding: 20px;
+    border-radius: 0.7rem;
 }
 .searchBarInput{
-    position: relative;
+    /* position: relative;
     width: 900px;
     right: 100px;
-    top: 20px;
+    top: 20px; */
     font-family:ar;
-    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2); */
 }
 .searchBarButton{
     position: relative;
-    right: -70px;
-    top: -19px;
+    /* right: -70px; */
+    /* top: -19px; */
     width: 200px;
     height: 39px;
     font-family:ar;
-    box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.2); */
 }
 .imgSearchBar{
     position:relative;
@@ -17491,7 +17501,7 @@ footer .border-bottom {
 .top-bar .top-bar-right {
     display: flex;
     position: relative;
-    right: 60px;
+    right: 10px;
 }
 @media (max-width: 1025px){
     .top-bar .top-bar-right{
@@ -22822,6 +22832,9 @@ form.convFormDynamic button.submit {
     }
     .cardsForMobs{
         display: block;
+    }
+    .education-categories .item-all-text h5{
+        font-size: 10px;
     }
 }
 .tblFilter .custom-control-label::after{
